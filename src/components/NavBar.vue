@@ -1,5 +1,5 @@
 <template>
-    <VaNavbar color="backgroundPrimary" class="h-18" shadowed="true" fixed="true">
+    <VaNavbar color="backgroundPrimary" class="h-18 px-20" shadowed="true" fixed="true">
         <template #left>
             <VaNavbarItem class="logo">
                 <RouterLink to="/">LOGO</RouterLink>
