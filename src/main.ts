@@ -33,6 +33,25 @@ app.use(createVuestic({
                     transparent: "rgba(0, 0, 0, 0)",
                     backgroundLanding: "#f4f9fc",
                     backgroundLandingBorder: "rgba(155, 179, 206, 0.8)"
+                },
+                dark: {
+                    primary: "#0D6E6E",
+                    secondary: "#666E75",
+                    success: "#3D9209",
+                    info: "#4a9d9c",
+                    danger: "#FF3D3D",
+                    warning: "#ffe0c8",
+                    backgroundPrimary: "#0D1F2D",
+                    backgroundSecondary: "#1d2e3d",
+                    backgroundElement: "#5c6a78",
+                    backgroundBorder: "#354656",
+                    textPrimary: "#FFFFFF",
+                    textInverted: "#262824",
+                    shadow: "#bfbfbf",
+                    focus: "#49A8FF",
+                    transparent: "rgba(0, 0, 0, 0)",
+                    backgroundLanding: "#f4f9fc",
+                    backgroundLandingBorder: "rgba(155, 179, 206, 0.8)"
                 }
                 
             }
