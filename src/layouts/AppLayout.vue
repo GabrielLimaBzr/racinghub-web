@@ -1,44 +1,24 @@
 <template>
     <div class="app-layout">
         <NavBar />
-        <div class="app-layout-content bg-slate-500	p-20">
-            <div class="bg-slate-950">
-                <h3 class="va-h2">
-                    APP
-                </h3>
-                <p>Page content must be wrapped in main tag. You must do it manually. Here you can place any blocks you need
-                    in
-                    your application.</p>
-
-                <p>For example, you can place here your router view, add sidebar with navigation in #left slot.</p>
-                <p>If you're using VaSidebar for page navigation don't forget to wrap it in nav tag.</p>
-            </div>
-            <div class="my-4">
-                <VaDivider />
-            </div>
-            <div class="bg-slate-900">
-                <h2 class="va-h6">
-                    Principais Eventos:
-                </h2>
-                <div class="flex flex-wrap">
-                    <div v-for="event in events" :key="event.id" class="w-full md:w-1/2 lg:w-1/4 p-4">
-                        <CardEvent :event="event" />
-                    </div>
-                </div>
-            </div>
+        <div class="app-layout-content p-20">
+            <router-view />
         </div>
+        <Footer />
     </div>
 </template>
 
 <script>
 
 import CardEvent from '@/components/CardEvent.vue';
-import NavBar from '../components/NavBar.vue'
+import NavBar from '../components/NavBar.vue';
+import Footer from '../components/Footer.vue'
 
 export default {
     components: {
         CardEvent,
-        NavBar
+        NavBar,
+        Footer
     },
     data() {
         return {
@@ -97,11 +77,13 @@ export default {
 .app-layout {
     width: 100%;
     display: flex;
+    flex-direction: column;
 
     .app-layout-content {
         display: flex;
         flex-direction: column;
         width: 100%;
+        min-height: 95vh;
     }
 
 }

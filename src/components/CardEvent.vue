@@ -1,5 +1,5 @@
 <template>
-    <VaCard>
+    <VaCard stripe-color="primary" stripe>
         <VaImage src="https://picsum.photos/400/200" class="h-52" />
         <VaCardTitle>{{ event.title }}</VaCardTitle>
         <VaCardContent>

@@ -1,5 +1,5 @@
 <template>
-    <VaNavbar color="backgroundPrimary" class="h-18 px-20 mb-5 nav-bar" :shadowed="true" :fixed="true">
+    <VaNavbar color="backgroundSecondary" class="h-18 px-20 mb-5 nav-bar" :shadowed="false" :fixed="true">
         <template #left>
             <VaNavbarItem class="logo">
                 <RouterLink to="/">LOGO</RouterLink>
@@ -14,21 +14,20 @@
         </template>
         <template #right>
             <VaNavbarItem class="hidden sm:block">
-                <RouterLink to="/">Home</RouterLink>
+                <VaButton preset="secondary" color="textPrimary">Criar Evento</VaButton>
             </VaNavbarItem>
             <VaNavbarItem class="hidden sm:block">
-                <RouterLink to="/">Participante</RouterLink>
+                <VaButton preset="secondary" color="textPrimary">Acessar Perfil</VaButton>
             </VaNavbarItem>
             <VaNavbarItem class="hidden sm:block">
-                <VaPopover message="Acessar minha conta">
-                    <RouterLink to="/">
-                        <VaIcon color="textPrimary"><ion-icon name="person"></ion-icon></VaIcon>
-                    </RouterLink>
-                </VaPopover>
+                <VaButton :gradient="true">Cadastre-se</VaButton>
             </VaNavbarItem>
+            
+            <VaDivider :vertical="true"></VaDivider>
+
             <VaNavbarItem>
                 <VaSwitch v-model="currentTheme" color="#5123a1" size="small" true-value="dark" false-value="light"
-                    off-color="#ffd300" style="--va-switch-checker-background-color: #252723;">
+                    off-color="#ffd300" style="--va-switch-checker-background-color: #252723;" class="ml-3">
                     <template #innerLabel>
                         <div class="va-text-center">
                             <VaIcon :name="currentTheme === 'dark' ? 'dark_mode' : 'light_mode'" />
@@ -36,13 +35,20 @@
                     </template>
                 </VaSwitch>
             </VaNavbarItem>
+            <VaNavbarItem class="hidden sm:block">
+                <VaPopover message="Acessar minha conta" color="primary">
+                    <RouterLink to="/">
+                        <VaButton :gradient="true"><VaIcon color="#FFFFFF"><ion-icon name="person"></ion-icon></VaIcon></VaButton>
+                    </RouterLink>
+                </VaPopover>
+            </VaNavbarItem>
         </template>
     </VaNavbar>
 </template>
 
 <script setup lang="ts">
 import { ref, watchEffect } from 'vue';
-import { useColors } from 'vuestic-ui'
+import { VaDivider, useColors } from 'vuestic-ui'
 
 const { presets, applyPreset, colors } = useColors()
 const search = ref('');
