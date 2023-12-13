@@ -23,8 +23,6 @@
     bottom: 0;
     width: 100%;
 
-    .footer-content {}
-
     .footer-end {
         width: 100%;
         background-color: var(--va-primary);

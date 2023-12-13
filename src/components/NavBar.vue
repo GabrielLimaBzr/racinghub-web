@@ -1,10 +1,13 @@
 <template>
-    <VaNavbar color="backgroundSecondary" class="h-18 px-20 mb-5 nav-bar" :shadowed="false" :fixed="true">
+    <VaNavbar :bordered="true" class="h-18 px-20 mb-5 nav-bar" :shadowed="true" :fixed="true">
         <template #left>
             <VaNavbarItem class="logo">
                 <RouterLink to="/">LOGO</RouterLink>
             </VaNavbarItem>
-            <VaNavbarItem class="logo hidden lg:block w-96">
+
+            <VaDivider :vertical="true"></VaDivider>
+
+            <VaNavbarItem class="logo hidden lg:block w-96 ml-3">
                 <VaInput v-model="search" class="w-96 text-base" placeholder="Procure eventos..." :clearable="true">
                     <template #prependInner>
                         <VaIcon color="secondary"><ion-icon name="search-circle-outline"></ion-icon></VaIcon>
@@ -22,7 +25,7 @@
             <VaNavbarItem class="hidden sm:block">
                 <VaButton :gradient="true">Cadastre-se</VaButton>
             </VaNavbarItem>
-            
+
             <VaDivider :vertical="true"></VaDivider>
 
             <VaNavbarItem>
@@ -38,7 +41,9 @@
             <VaNavbarItem class="hidden sm:block">
                 <VaPopover message="Acessar minha conta" color="primary">
                     <RouterLink to="/">
-                        <VaButton :gradient="true"><VaIcon color="#FFFFFF"><ion-icon name="person"></ion-icon></VaIcon></VaButton>
+                        <VaButton :gradient="true">
+                            <VaIcon color="#FFFFFF"><ion-icon name="person"></ion-icon></VaIcon>
+                        </VaButton>
                     </RouterLink>
                 </VaPopover>
             </VaNavbarItem>
@@ -64,6 +69,10 @@ watchEffect(() => {
 <style scoped>
 .nav-bar {
     z-index: 2;
+    /* border-top: 3px solid var(--va-gradient); */
+    border-bottom-width: 4px;
+    border-style: solid;
+    border-image: linear-gradient(to right, #0D6E6E, #1cdfdf) 1;
 }
 
 .logo {

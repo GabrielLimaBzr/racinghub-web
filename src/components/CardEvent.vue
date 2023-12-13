@@ -1,5 +1,5 @@
 <template>
-    <VaCard stripe-color="primary" stripe>
+    <VaCard stripe-color="primary" stripe :to="`main/${event.id}`" class="hover-effect">
         <VaImage src="https://picsum.photos/400/200" class="h-52" />
         <VaCardTitle>{{ event.title }}</VaCardTitle>
         <VaCardContent>
@@ -11,11 +11,6 @@
 <script>
 export default {
     name: 'CardEvent',
-    data() {
-        return {
-            search: ""
-        }
-    },
     props: {
         event: {
             type: Object,
@@ -26,4 +21,12 @@ export default {
 
 </script>
   
-<style scoped></style>
+<style scoped>
+.hover-effect {
+  transition: transform 0.3s ease;
+}
+
+.hover-effect:hover {
+  transform: scale(1.1);
+}
+</style>

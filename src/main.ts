@@ -22,7 +22,7 @@ app.use(createVuestic({
                     info: "#4a9d9c",
                     danger: "#FF3D3D",
                     warning: "#ffe0c8",
-                    backgroundPrimary: "#f5f5f5",
+                    backgroundPrimary: "#f2f7f7",
                     backgroundSecondary: "#FFFFFF",
                     backgroundElement: "#dbdcdc",
                     backgroundBorder: "#DEE5F2",

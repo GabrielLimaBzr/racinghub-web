@@ -23,6 +23,22 @@
                     <CardEvent :event="event" />
                 </div>
             </div>
+
+            <div class="event-page">
+                <VaPagination v-model="pageCurrent" :visible-pages="3" :total="100" :page-size="10" boundary-numbers gapped
+                    class="mb-3 justify-center sm:justify-start">
+                    <template #prevPageLink="{ onClick, disabled }">
+                        <VaButton preset="primary" :disabled="disabled" aria-label="go prev page" @click="onClick">
+                            Anterior
+                        </VaButton>
+                    </template>
+                    <template #nextPageLink="{ onClick, disabled }">
+                        <VaButton preset="primary" :disabled="disabled" aria-label="go next page" @click="onClick">
+                            Próximo
+                        </VaButton>
+                    </template>
+                </VaPagination>
+            </div>
         </div>
     </div>
 </template>
@@ -30,6 +46,7 @@
 <script>
 
 import CardEvent from '@/components/CardEvent.vue';
+import eventos from '../assets/eventsMock'
 
 export default {
     components: {
@@ -37,55 +54,19 @@ export default {
     },
     data() {
         return {
-            events: [
-                {
-                    id: 1,
-                    title: "Evento 1",
-                    date: "01/01/2023",
-                    image: "caminho/para/imagem1.jpg"
-                    // Outras informações do evento aqui
-                },
-                {
-                    id: 2,
-                    title: "Evento 2",
-                    date: "02/01/2023",
-                    image: "caminho/para/imagem2.jpg"
-                    // Outras informações do evento aqui
-                },
-                {
-                    id: 2,
-                    title: "Evento 2",
-                    date: "02/01/2023",
-                    image: "caminho/para/imagem2.jpg"
-                    // Outras informações do evento aqui
-                },
-                {
-                    id: 2,
-                    title: "Evento 2",
-                    date: "02/01/2023",
-                    image: "caminho/para/imagem2.jpg"
-                    // Outras informações do evento aqui
-                },
-                {
-                    id: 2,
-                    title: "Evento 2",
-                    date: "02/01/2023",
-                    image: "caminho/para/imagem2.jpg"
-                    // Outras informações do evento aqui
-                },
-                {
-                    id: 2,
-                    title: "Evento 2",
-                    date: "02/01/2023",
-                    image: "caminho/para/imagem2.jpg"
-                    // Outras informações do evento aqui
-                },
-                // Adicione mais eventos conforme necessário
-            ]
+            events: eventos,
+            pageCurrent: 0,
+            pageSize: 10,
         };
     }
 }
 
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.event-page {
+    display: flex;
+    justify-content: center;
+    margin-top: 7vh;
+}
+</style>
