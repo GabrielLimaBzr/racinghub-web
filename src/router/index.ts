@@ -15,8 +15,13 @@ const router = createRouter({
       children: [
         {
           name: 'main',
-          path: 'main',
+          path: '/main',
           component: () => import('../views/MainView.vue'),
+        },
+        {
+          name: 'event',
+          path: '/event/:id',
+          component: () => import('../views/EventView.vue'),
         }
       ]
     }

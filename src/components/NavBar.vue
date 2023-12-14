@@ -1,14 +1,14 @@
 <template>
-    <VaNavbar :bordered="true" class="h-18 px-20 mb-5 nav-bar" :shadowed="true" :fixed="true">
+    <VaNavbar :bordered="false" class="h-18 px-20 mb-5 nav-bar" :shadowed="true" :fixed="true">
         <template #left>
             <VaNavbarItem class="logo">
                 <RouterLink to="/">LOGO</RouterLink>
             </VaNavbarItem>
 
-            <VaDivider :vertical="true"></VaDivider>
+            <VaDivider class="mr-5 hidden sm:block" :vertical="true"></VaDivider>
 
-            <VaNavbarItem class="logo hidden lg:block w-96 ml-3">
-                <VaInput v-model="search" class="w-96 text-base" placeholder="Procure eventos..." :clearable="true">
+            <VaNavbarItem class="logo hidden md:block">
+                <VaInput v-model="search" class="text-base" placeholder="Procure eventos..." :clearable="true">
                     <template #prependInner>
                         <VaIcon color="secondary"><ion-icon name="search-circle-outline"></ion-icon></VaIcon>
                     </template>
@@ -26,11 +26,11 @@
                 <VaButton :gradient="true">Cadastre-se</VaButton>
             </VaNavbarItem>
 
-            <VaDivider :vertical="true"></VaDivider>
+            <VaDivider class="mr-5 hidden sm:block" :vertical="true"></VaDivider>
 
-            <VaNavbarItem>
+            <VaNavbarItem class="hidden sm:flex flex justify-center content-center">
                 <VaSwitch v-model="currentTheme" color="#5123a1" size="small" true-value="dark" false-value="light"
-                    off-color="#ffd300" style="--va-switch-checker-background-color: #252723;" class="ml-3">
+                    off-color="#ffd300" style="--va-switch-checker-background-color: #252723;">
                     <template #innerLabel>
                         <div class="va-text-center">
                             <VaIcon :name="currentTheme === 'dark' ? 'dark_mode' : 'light_mode'" />
@@ -38,7 +38,7 @@
                     </template>
                 </VaSwitch>
             </VaNavbarItem>
-            <VaNavbarItem class="hidden sm:block">
+            <VaNavbarItem class="hidden sm:flex flex justify-center content-center">
                 <VaPopover message="Acessar minha conta" color="primary">
                     <RouterLink to="/">
                         <VaButton :gradient="true">
@@ -68,9 +68,9 @@ watchEffect(() => {
   
 <style scoped>
 .nav-bar {
-    z-index: 2;
+    z-index: 4;
     /* border-top: 3px solid var(--va-gradient); */
-    border-bottom-width: 4px;
+    border-top-width: 4px;
     border-style: solid;
     border-image: linear-gradient(to right, #0D6E6E, #1cdfdf) 1;
 }

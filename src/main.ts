@@ -16,8 +16,8 @@ app.use(createVuestic({
         colors:{
             presets:{
                 light:{
-                    primary: "#0D6E6E",
-                    secondary: "#666E75",
+                    primary: "#3d8b8b",
+                    secondary: "#0D6E6E",
                     success: "#3D9209",
                     info: "#4a9d9c",
                     danger: "#FF3D3D",
@@ -35,8 +35,8 @@ app.use(createVuestic({
                     backgroundLandingBorder: "rgba(155, 179, 206, 0.8)"
                 },
                 dark: {
-                    primary: "#0D6E6E",
-                    secondary: "#666E75",
+                    primary: "#3d8b8b",
+                    secondary: "#0D6E6E",
                     success: "#3D9209",
                     info: "#4a9d9c",
                     danger: "#FF3D3D",

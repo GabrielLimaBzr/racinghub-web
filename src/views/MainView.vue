@@ -1,30 +1,36 @@
 <template>
     <div>
         <div>
-            <h3 class="va-h2">
-                APP
-            </h3>
-            <p>Page content must be wrapped in main tag. You must do it manually. Here you can place any blocks you need
-                in
-                your application.</p>
-
-            <p>For example, you can place here your router view, add sidebar with navigation in #left slot.</p>
-            <p>If you're using VaSidebar for page navigation don't forget to wrap it in nav tag.</p>
-        </div>
-        <div class="my-4">
-            <VaDivider />
+            <div class="mb-5">
+                <p class="apr">
+                    <span class="apr-title">
+                        <VaIcon size="large"><ion-icon name="caret-forward-outline"></ion-icon></VaIcon>
+                        Principais Eventos
+                    </span>
+                </p>
+                <VaDivider />
+            </div>
+            <div>
+                <Carousel />
+            </div>
         </div>
         <div>
-            <h2 class="va-h6">
-                Principais Eventos:
-            </h2>
+            <div class="mb-5">
+                <p class="apr">
+                    <span class="apr-title">
+                        <VaIcon size="large"><ion-icon name="caret-forward-outline"></ion-icon></VaIcon>
+                        Confira os próximos eventos!
+                    </span>
+                </p>
+                <VaDivider />
+            </div>
             <div class="flex flex-wrap">
-                <div v-for="event in events" :key="event.id" class="w-full md:w-1/2 lg:w-1/4 p-4">
+                <div v-for="event in events" :key="event.id" class="w-full md:w-1/2 lg:w-1/4">
                     <CardEvent :event="event" />
                 </div>
             </div>
 
-            <div class="event-page">
+            <div class="pag">
                 <VaPagination v-model="pageCurrent" :visible-pages="3" :total="100" :page-size="10" boundary-numbers gapped
                     class="mb-3 justify-center sm:justify-start">
                     <template #prevPageLink="{ onClick, disabled }">
@@ -47,10 +53,12 @@
 
 import CardEvent from '@/components/CardEvent.vue';
 import eventos from '../assets/eventsMock'
+import Carousel from '../components/Carousel.vue';
 
 export default {
     components: {
         CardEvent,
+        Carousel
     },
     data() {
         return {
@@ -64,9 +72,21 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.event-page {
+.pag {
     display: flex;
     justify-content: center;
     margin-top: 7vh;
+}
+
+.apr {
+    height: 40px;
+    line-height: 60px;
+    vertical-align: middle;
+    color: var(--va-primary);
+
+    .apr-title {
+        font-weight: 700;
+        font-size: 20px;
+    }
 }
 </style>

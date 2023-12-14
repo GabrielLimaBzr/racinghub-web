@@ -1,7 +1,7 @@
 <template>
     <div class="app-layout">
-        <NavBar />
-        <div class="app-layout-content p-20">
+        <NavBar/>
+        <div class="app-layout-content px-20 pt-[15vh] pb-10">
             <router-view />
         </div>
         <Footer />
@@ -10,13 +10,11 @@
 
 <script>
 
-import CardEvent from '@/components/CardEvent.vue';
 import NavBar from '../components/NavBar.vue';
 import Footer from '../components/Footer.vue'
 
 export default {
     components: {
-        CardEvent,
         NavBar,
         Footer
     },
