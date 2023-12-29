@@ -23,7 +23,8 @@
                 <VaButton preset="secondary" color="textPrimary">Acessar Perfil</VaButton>
             </VaNavbarItem>
             <VaNavbarItem class="hidden sm:block">
-                <VaButton :gradient="true">Cadastre-se</VaButton>
+                <VaButton :gradient="true" @click="abrirModalSingup">Cadastre-se</VaButton>
+                <ModalSingup :is-active="modalSingup" @canceled="fecharModalSingup"/>
             </VaNavbarItem>
 
             <VaDivider class="mr-5 hidden sm:block" :vertical="true"></VaDivider>
@@ -53,11 +54,21 @@
 
 <script setup lang="ts">
 import { ref, watchEffect } from 'vue';
-import { VaDivider, useColors } from 'vuestic-ui'
+import { useColors } from 'vuestic-ui'
+import ModalSingup from '../components/modal/ModalSingup.vue'
 
 const { presets, applyPreset, colors } = useColors()
 const search = ref('');
 const currentTheme = ref('light')
+const modalSingup = ref(false)
+
+const abrirModalSingup = () => {
+  modalSingup.value = true;
+}
+
+const fecharModalSingup = () => {
+    modalSingup.value = false
+}
 
 watchEffect(() => {
     applyPreset(currentTheme.value)
