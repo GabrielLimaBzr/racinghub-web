@@ -1,10 +1,10 @@
 <template>
     <div class="app-layout">
         <NavBar/>
-        <div class="app-layout-content px-20 pt-[15vh] pb-10">
+        <div class="app-layout-content px-20 pt-[15vh] pb-10 max-w-screen-xl mx-auto">
             <router-view />
         </div>
-        <Footer />
+        <Footer/>
     </div>
 </template>
 
