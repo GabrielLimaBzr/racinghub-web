@@ -3,9 +3,14 @@
         <VaImage src="https://picsum.photos/400/200" class="h-32" />
         <VaCardTitle class="title">
             <div>
-                <span><VaIcon size="small" color="primary"><ion-icon name="calendar-outline"></ion-icon></VaIcon> {{ event.date }}</span>
+                <span class="info">
+                    <VaIcon size="small" color="primary"><ion-icon name="calendar-outline"></ion-icon></VaIcon> {{ event.date }}
+                </span>
                 <VaDivider :vertical="true" color="primary"/>
-                <span><VaIcon size="small" color="primary"><ion-icon name="location-outline"></ion-icon></VaIcon> {{ event.local }}</span>
+
+                <span class="info">
+                    <VaIcon size="small" color="primary"><ion-icon name="location-outline"></ion-icon></VaIcon> {{ event.local }}
+                </span>
             </div>
         </VaCardTitle>
         <VaCardContent class="mt-[-15px]">
@@ -36,6 +41,10 @@ defineProps({
 .title{
     color: var(--va-primary);
     font-size: 2vh;
+}
+
+.info{
+    font-size: 1.1rem;
 }
 </style>
 <!-- 
