@@ -1,7 +1,7 @@
 <template>
     <div class="app-layout">
         <NavBar/>
-        <div class="app-layout-content px-20 pt-[15vh] pb-10 max-w-screen-xl mx-auto">
+        <div class="app-layout-content px-20 pt-[90px] pb-10  max-w-custom mx-auto">
             <router-view />
         </div>
         <Footer/>
@@ -84,5 +84,9 @@ export default {
         min-height: 95vh;
     }
 
+}
+
+.max-w-custom {
+    max-width: 1500px; /* ou qualquer outro valor desejado */
 }
 </style>
