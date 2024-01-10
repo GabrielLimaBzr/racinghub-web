@@ -1,11 +1,11 @@
 <template>
     <div>
         <VaForm tag="form" @submit.prevent="handleSubmit" class="flex flex-col gap-3 w-full">
-            <VaInput v-model="email" label="Email" />
+            <VaInput v-model="form.email" label="Email" />
 
-            <VaInput v-model="password" type="password" label="Password" />
+            <VaInput v-model="form.pass" type="password" label="Password" />
 
-            <VaInput v-model="password" type="password" label="Confirm Password" />
+            <VaInput v-model="form.passConfirm" type="password" label="Confirm Password" />
 
             <VaButton type="submit">
                 Criar Conta
@@ -14,7 +14,19 @@
     </div>
 </template>
 
-<script setup>
+<script>
+export default {
+    data() {
+        return {
+            form: {}
+        }
+    },
+    methods:{
+        handleSubmit() {
+            alert("-- form submit --");
+        },
+    }
+}
 
 </script>
 

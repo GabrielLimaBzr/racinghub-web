@@ -19,17 +19,7 @@
                             {{ currentTab.title }}
                         </VaCardTitle>
                         <VaCardContent>
-                            <VaForm tag="form" @submit.prevent="handleSubmit" class="flex flex-col gap-3 w-full">
-                                <VaInput v-model="email" label="Email" />
-
-                                <VaInput v-model="password" type="password" label="Password" />
-
-                                <VaInput v-model="password" type="password" label="Confirm Password" />
-
-                                <VaButton type="submit">
-                                    Criar Conta
-                                </VaButton>
-                            </VaForm>
+                            <FormNewParticipant/>
                         </VaCardContent>
                     </VaCard>
                 </div>
@@ -47,7 +37,12 @@ const TABS = [
     { title: 'ORGANIZADOR', icon: 'desktop' },
 ];
 
+import FormNewParticipant from '../NewParticipant.vue';
+
 export default {
+    components:{
+        FormNewParticipant
+    },
     data() {
         return {
             showModal: false,
@@ -85,10 +80,7 @@ export default {
         onCanceled() {
             // Emitir evento para o componente pai quando a ação for cancelada
             this.$emit('canceled');
-        },
-        handleSubmit() {
-            alert("-- form submit --");
-        },
+        }
     },
 };
 </script>
