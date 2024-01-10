@@ -1,5 +1,5 @@
 <template>
-    <VaNavbar :bordered="false" class="h-18 px-20 mb-5 nav-bar" :shadowed="true" :fixed="true">
+    <VaNavbar :bordered="false" class="h-18 mb-5 nav-bar" :shadowed="true" :fixed="true">
         <template #left>
             <VaNavbarItem class="logo">
                 <RouterLink to="/">LOGO</RouterLink>
@@ -79,6 +79,8 @@ watchEffect(() => {
   
 <style scoped>
 .nav-bar {
+    padding-left: max(calc((100% - 1350px) / 2), 5vw); 
+    padding-right: max(calc((100% - 1350px) / 2), 5vw);
     z-index: 4;
     /* border-top: 3px solid var(--va-gradient); */
     border-top-width: 4px;

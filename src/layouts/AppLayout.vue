@@ -1,7 +1,7 @@
 <template>
     <div class="app-layout">
         <NavBar/>
-        <div class="app-layout-content px-20 pt-[90px] pb-10  max-w-custom mx-auto">
+        <div class="app-layout-content pt-[90px] pb-10  max-w-custom mx-auto sm:px-4 md:px-8 lg:px-12 xl:px-20">
             <router-view />
         </div>
         <Footer/>

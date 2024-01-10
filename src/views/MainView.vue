@@ -10,7 +10,7 @@
                 </p>
                 <VaDivider />
             </div>
-            <div>
+            <div class="px-2">
                 <Carousel />
             </div>
         </div>
@@ -86,7 +86,7 @@ export default {
 
     .apr-title {
         font-weight: 700;
-        font-size: 20px;
+        font-size: 1rem;
     }
 }
 </style>
