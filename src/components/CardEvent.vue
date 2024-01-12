@@ -2,7 +2,7 @@
     <VaCard :to="`event/${event.id}`" class="hover-effect m-4">
         <VaImage src="https://picsum.photos/400/200" class="h-32" />
         <VaCardTitle class="title">
-            <div class="flex items-center	">
+            <div class="flex items-center w-full">
                 <span class="info">
                     <VaIcon size="small" color="primary"><ion-icon name="calendar-outline"></ion-icon></VaIcon> {{
                         event.date }}
@@ -51,7 +51,7 @@ defineProps({
 
 
 .info {
-    font-size: 1.1rem;
+    font-size: 1rem;
 }
 
 .va-card-title{

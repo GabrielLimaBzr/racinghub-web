@@ -9,7 +9,7 @@
         <div>
             <TitleHolder title="Confira os próximos eventos!"/>
             <div class="flex flex-wrap">
-                <div v-for="event in events" :key="event.id" class="w-full md:w-1/2 lg:w-1/4">
+                <div v-for="event in events" :key="event.id" class="w-full md:w-1/2 lg:w-1/3 xl:w-1/4">
                     <CardEvent :event="event" />
                 </div>
             </div>

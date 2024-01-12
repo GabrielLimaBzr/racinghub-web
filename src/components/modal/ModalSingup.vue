@@ -14,7 +14,7 @@
                 <div class="w-[430px]">
                     <VaCard outlined :bordered="true" class="my-3">
                         <VaCardTitle>
-                            <VaIcon size="small" color="#262824"><ion-icon :name="currentTab.icon" class="mr-2"></ion-icon>
+                            <VaIcon size="small" style="color: var(--va-textPrimary);"><ion-icon :name="currentTab.icon" class="mr-2"></ion-icon>
                             </VaIcon>
                             {{ currentTab.title }}
                         </VaCardTitle>
