@@ -2,14 +2,17 @@
     <VaCard :to="`event/${event.id}`" class="hover-effect m-4">
         <VaImage src="https://picsum.photos/400/200" class="h-32" />
         <VaCardTitle class="title">
-            <div>
+            <div class="info-space">
                 <span class="info">
-                    <VaIcon size="small" color="primary"><ion-icon name="calendar-outline"></ion-icon></VaIcon> {{ event.date }}
+                    <VaIcon size="small" color="primary"><ion-icon name="calendar-outline"></ion-icon></VaIcon> {{
+                        event.date }}
                 </span>
-                <VaDivider :vertical="true" color="primary"/>
+
+                <VaDivider :vertical="true" color="primary" :inset="true" />
 
                 <span class="info">
-                    <VaIcon size="small" color="primary"><ion-icon name="location-outline"></ion-icon></VaIcon> {{ event.local }}
+                    <VaIcon size="small" color="primary"><ion-icon name="location-outline"></ion-icon></VaIcon> {{
+                        event.local }}
                 </span>
             </div>
         </VaCardTitle>
@@ -21,7 +24,7 @@
 
 <script setup lang="ts">
 defineProps({
-    event:{
+    event: {
         required: true,
         type: Object
     }
@@ -31,20 +34,25 @@ defineProps({
   
 <style scoped>
 .hover-effect {
-  transition: transform 0.3s ease;
+    transition: transform 0.3s ease;
 }
 
 .hover-effect:hover {
-  transform: scale(1.05);
+    transform: scale(1.05);
 }
 
-.title{
+.title {
     color: var(--va-primary);
     font-size: 2vh;
 }
 
-.info{
-    font-size: 1.1rem;
+.info-space {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .info {
+        font-size: 1.1rem;
+    }
 }
 </style>
 <!-- 
