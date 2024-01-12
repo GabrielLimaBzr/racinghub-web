@@ -1,29 +1,13 @@
 <template>
     <div>
-        <div class="mb-5">
-            <p class="apr">
-                <span class="apr-title">
-                    <VaIcon size="large"><ion-icon name="caret-forward-outline"></ion-icon></VaIcon>
-                    Evento X
-                </span>
-            </p>
-            <VaDivider />
-        </div>
+        <TitleHolder title="Evento X"/>
         <div>
             <div>
                 <VaCard>
                     <VaImage src="https://picsum.photos/400/200" class="h-80" />
                     <VaCardContent>
                         <div>
-                            <div class="mb-5">
-                                <p class="apr">
-                                    <span class="apr-title">
-                                        <VaIcon size="large"><ion-icon name="caret-forward-outline"></ion-icon></VaIcon>
-                                        Evento X
-                                    </span>
-                                </p>
-                                <VaDivider />
-                            </div>
+                            <TitleHolder title="Evento X"/>
                         </div>
                     </VaCardContent>
                 </VaCard>
@@ -33,19 +17,9 @@
 </template>
 
 <script setup>
+import TitleHolder from '@/components/TitleHolder.vue';
 
 </script>
 
 <style lang="scss" scoped>
-.apr {
-    height: 40px;
-    line-height: 60px;
-    vertical-align: middle;
-    color: var(--va-primary);
-
-    .apr-title {
-        font-weight: 700;
-        font-size: 20px;
-    }
-}
 </style>

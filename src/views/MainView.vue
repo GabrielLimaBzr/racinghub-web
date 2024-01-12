@@ -1,29 +1,13 @@
 <template>
     <div>
         <div>
-            <div class="mb-5">
-                <p class="apr">
-                    <span class="apr-title">
-                        <VaIcon size="large"><ion-icon name="caret-forward-outline"></ion-icon></VaIcon>
-                        Principais Eventos
-                    </span>
-                </p>
-                <VaDivider />
-            </div>
+            <TitleHolder title="Principais Eventos"/>
             <div class="px-2">
                 <Carousel />
             </div>
         </div>
         <div>
-            <div class="mb-5">
-                <p class="apr">
-                    <span class="apr-title">
-                        <VaIcon size="large"><ion-icon name="caret-forward-outline"></ion-icon></VaIcon>
-                        Confira os próximos eventos!
-                    </span>
-                </p>
-                <VaDivider />
-            </div>
+            <TitleHolder title="Confira os próximos eventos!"/>
             <div class="flex flex-wrap">
                 <div v-for="event in events" :key="event.id" class="w-full md:w-1/2 lg:w-1/4">
                     <CardEvent :event="event" />
@@ -54,11 +38,13 @@
 import CardEvent from '@/components/CardEvent.vue';
 import eventos from '../assets/eventsMock'
 import Carousel from '../components/Carousel.vue';
+import TitleHolder from '@/components/TitleHolder.vue';
 
 export default {
     components: {
         CardEvent,
-        Carousel
+        Carousel,
+        TitleHolder
     },
     data() {
         return {
@@ -78,15 +64,4 @@ export default {
     margin-top: 7vh;
 }
 
-.apr {
-    height: 40px;
-    line-height: 60px;
-    vertical-align: middle;
-    color: var(--va-primary);
-
-    .apr-title {
-        font-weight: 700;
-        font-size: 1rem;
-    }
-}
 </style>
