@@ -5,7 +5,7 @@
                 <RouterLink to="/">LOGO</RouterLink>
             </VaNavbarItem>
 
-            <VaDivider class="mr-5 hidden sm:block" :vertical="true"></VaDivider>
+            <VaDivider class="mr-5 hidden md:block" :vertical="true"></VaDivider>
 
             <VaNavbarItem class="logo hidden md:block">
                 <VaInput v-model="search" class="text-base" placeholder="Procure eventos..." :clearable="true">
@@ -16,20 +16,17 @@
             </VaNavbarItem>
         </template>
         <template #right>
-            <VaNavbarItem class="hidden sm:block">
+            <VaNavbarItem class="hidden md:block">
                 <VaButton preset="secondary" color="textPrimary">Criar Evento</VaButton>
             </VaNavbarItem>
-            <VaNavbarItem class="hidden sm:block">
-                <VaButton preset="secondary" color="textPrimary">Acessar Perfil</VaButton>
-            </VaNavbarItem>
-            <VaNavbarItem class="hidden sm:block">
+            <VaNavbarItem class="hidden md:block">
                 <VaButton :gradient="true" @click="abrirModalSingup">Cadastre-se</VaButton>
                 <ModalSingup :is-active="modalSingup" @canceled="fecharModalSingup"/>
             </VaNavbarItem>
 
-            <VaDivider class="mr-5 hidden sm:block" :vertical="true"></VaDivider>
+            <VaDivider class="mr-5 hidden md:block" :vertical="true"></VaDivider>
 
-            <VaNavbarItem class="hidden sm:flex flex justify-center content-center">
+            <VaNavbarItem class="hidden md:flex flex justify-center content-center">
                 <VaSwitch v-model="currentTheme" color="#5123a1" size="small" true-value="dark" false-value="light"
                     off-color="#ffd300" style="--va-switch-checker-background-color: #252723;">
                     <template #innerLabel>
@@ -39,7 +36,7 @@
                     </template>
                 </VaSwitch>
             </VaNavbarItem>
-            <VaNavbarItem class="hidden sm:flex flex justify-center content-center">
+            <VaNavbarItem class="hidden md:flex flex justify-center content-center">
                 <VaPopover message="Acessar minha conta" color="primary">
                     <RouterLink to="/">
                         <VaButton :gradient="true">
