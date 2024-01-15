@@ -17,10 +17,10 @@
         </template>
         <template #right>
             <VaNavbarItem class="hidden md:block">
-                <VaButton preset="secondary" color="textPrimary">Criar Evento</VaButton>
+                <VaButton preset="secondary" hover-behavior="opacity" :hover-opacity="0.2" color="textPrimary">Criar Evento</VaButton>
             </VaNavbarItem>
             <VaNavbarItem class="hidden md:block">
-                <VaButton :gradient="true" @click="abrirModalSingup">Cadastre-se</VaButton>
+                <VaButton class="transition ease-in-out delay-50 hover:scale-110 duration-300" :gradient="true" @click="abrirModalSingup">Cadastre-se</VaButton>
                 <ModalSingup :is-active="modalSingup" @canceled="fecharModalSingup"/>
             </VaNavbarItem>
 

@@ -1,5 +1,5 @@
 <template>
-    <VaCard :to="`event/${event.id}`" class="hover-effect m-4">
+    <VaCard :to="`event/${event.id}`" class="m-4 transition ease-in-out delay-50 hover:scale-110 duration-300">
         <VaImage src="https://picsum.photos/400/200" class="h-32" />
         <VaCardTitle class="title">
             <div class="flex items-center w-full">
@@ -36,14 +36,6 @@ defineProps({
 </script>
   
 <style scoped>
-.hover-effect {
-    transition: transform 0.3s ease;
-}
-
-.hover-effect:hover {
-    transform: scale(1.05);
-}
-
 .title {
     color: var(--va-primary);
     font-size: 2vh;
