@@ -1,30 +1,27 @@
 <template>
     <div>
         <TitleHolder title="Principais Eventos" />
-        <div class="grid w-full grid-cols-3 py-2" style="border: solid 1px red;">
-            <div class="col-span-2">
-                
-                <div class="px-2">
-                    <Carousel />
-                </div>
+        <div class="grid w-full grid-cols-3 py-2 items-stretch gap-3">
+            <div class="col-span-3 lg:col-span-2 p-2">
+                <Carousel />
             </div>
-            <div class="col-span-1">
-                <TitleHolder title="Crie, publique e venda eventos ou conteúdos digitais" />
+            <div class="col-span-3 lg:col-span-1 p-2">
                 <VaCard color="primary" :gradient="true">
-                    <VaCardTitle>A maior plataforma do Brasil - e a mais fácil de usar</VaCardTitle>
+                    <VaCardTitle>A maior plataforma do Brasil <br> e a mais fácil de usar</VaCardTitle>
                     <VaCardContent>
                         <div>
                             <span>
                                 Junte-se a mais de 300 mil produtores na Sympla. Crie, publique e venda eventos ou conteúdos
                                 digitais
+                                <VaDivider></VaDivider>
                             </span>
                         </div>
                     </VaCardContent>
                     <VaCardActions align="stretch">
-                        <VaButton text-color="textPrimary" color="textInverted">
+                        <VaButton text-color="primary" color="#f2f7f7">
                             Action Card
                         </VaButton>
-                        <VaButton preset="secondary" border-color="textInverted" color="textInverted">
+                        <VaButton preset="secondary" border-color="#f2f7f7" text-color="#f2f7f7">
                             Action
                         </VaButton>
                     </VaCardActions>
@@ -90,6 +87,6 @@ export default {
 }
 
 .va-card__title {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
 }
 </style>
