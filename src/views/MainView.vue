@@ -1,13 +1,38 @@
 <template>
     <div>
-        <div>
-            <TitleHolder title="Principais Eventos"/>
-            <div class="px-2">
-                <Carousel />
+        <TitleHolder title="Principais Eventos" />
+        <div class="grid w-full grid-cols-3 py-2" style="border: solid 1px red;">
+            <div class="col-span-2">
+                
+                <div class="px-2">
+                    <Carousel />
+                </div>
+            </div>
+            <div class="col-span-1">
+                <TitleHolder title="Crie, publique e venda eventos ou conteúdos digitais" />
+                <VaCard color="primary" :gradient="true">
+                    <VaCardTitle>A maior plataforma do Brasil - e a mais fácil de usar</VaCardTitle>
+                    <VaCardContent>
+                        <div>
+                            <span>
+                                Junte-se a mais de 300 mil produtores na Sympla. Crie, publique e venda eventos ou conteúdos
+                                digitais
+                            </span>
+                        </div>
+                    </VaCardContent>
+                    <VaCardActions align="stretch">
+                        <VaButton text-color="textPrimary" color="textInverted">
+                            Action Card
+                        </VaButton>
+                        <VaButton preset="secondary" border-color="textInverted" color="textInverted">
+                            Action
+                        </VaButton>
+                    </VaCardActions>
+                </VaCard>
             </div>
         </div>
         <div>
-            <TitleHolder title="Confira os próximos eventos!"/>
+            <TitleHolder title="Confira os próximos eventos!" />
             <div class="flex flex-wrap">
                 <div v-for="event in events" :key="event.id" class="w-full md:w-1/2 lg:w-1/3 xl:w-1/4">
                     <CardEvent :event="event" />
@@ -64,4 +89,7 @@ export default {
     margin-top: 7vh;
 }
 
+.va-card__title {
+    font-size: 1.5rem;
+}
 </style>
