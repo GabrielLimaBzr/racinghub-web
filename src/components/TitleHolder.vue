@@ -18,7 +18,7 @@ import { ref } from 'vue';
 const props = defineProps(['title']);
 </script>
   
-<style scoped>
+<style scoped lang="scss">
 
 .apr {
     height: 40px;
@@ -28,7 +28,7 @@ const props = defineProps(['title']);
 
     .apr-title {
         font-weight: 700;
-        font-size: 1rem;
+        font-size: 1.3rem;
     }
 }
 </style>
