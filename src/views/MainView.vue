@@ -10,8 +10,8 @@
                     <VaCardTitle>A maior plataforma do Brasil <br> e a mais fácil de usar</VaCardTitle>
                     <VaCardContent>
                         <div>
-                            <span>
-                                Junte-se a mais de 300 mil produtores na Sympla. Crie, publique e venda eventos ou conteúdos
+                            <span style="font-size: 1rem;">
+                                Junte-se a mais de 300 mil produtores na Sympla.<br> Crie, publique e venda eventos ou conteúdos
                                 digitais
                                 <VaDivider></VaDivider>
                             </span>
@@ -88,5 +88,12 @@ export default {
 
 .va-card__title {
     font-size: 1.3rem;
+}
+
+.va-card{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 </style>
