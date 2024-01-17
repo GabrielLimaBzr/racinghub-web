@@ -6,8 +6,8 @@
                 <Carousel />
             </div>
             <div class="col-span-3 lg:col-span-1 p-2">
-                <VaCard color="primary" :gradient="true">
-                    <VaCardTitle>A maior plataforma do Brasil <br> e a mais fácil de usar</VaCardTitle>
+                <VaCard color="primary" :gradient="true" class="va-card_mx">
+                    <VaCardTitle class="va-card__title_mx">A maior plataforma do Brasil <br> e a mais fácil de usar</VaCardTitle>
                     <VaCardContent>
                         <div>
                             <span style="font-size: 1rem;">
@@ -86,11 +86,11 @@ export default {
     margin-top: 7vh;
 }
 
-.va-card__title {
+.va-card__title_mx {
     font-size: 1.3rem;
 }
 
-.va-card{
+.va-card_mx{
     height: 100%;
     display: flex;
     flex-direction: column;
