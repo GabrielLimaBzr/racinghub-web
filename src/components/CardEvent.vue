@@ -43,7 +43,7 @@ defineProps({
 
 
 .info {
-    font-size: 1rem;
+    font-size: 0.9rem;
 }
 
 .va-card-title{

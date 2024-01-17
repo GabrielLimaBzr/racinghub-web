@@ -11,7 +11,7 @@
                     <VaCardContent>
                         <div>
                             <span style="font-size: 1rem;">
-                                Junte-se a mais de 300 mil produtores na Sympla.<br> Crie, publique e venda eventos ou conteúdos
+                                Junte-se a mais de 300 mil produtores na Racing.<br> Crie, publique e venda eventos ou conteúdos
                                 digitais
                                 <VaDivider></VaDivider>
                             </span>
