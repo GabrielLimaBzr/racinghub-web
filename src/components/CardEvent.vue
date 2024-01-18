@@ -1,5 +1,5 @@
 <template>
-    <VaCard :to="`event/${event.id}`" class="m-4 transition ease-in-out delay-50 hover:scale-110 duration-300">
+    <VaCard :to="`event/${event.id}`" class="m-4 transition ease-in-out delay-50 hover:scale-[1.08] duration-300">
         <VaImage src="https://picsum.photos/400/200" class="h-32" />
         <VaCardTitle class="title">
             <div class="flex items-center w-full">
