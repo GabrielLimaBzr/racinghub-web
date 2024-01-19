@@ -6,7 +6,7 @@
                 <Carousel />
             </div>
             <div class="col-span-3 lg:col-span-1 p-2">
-                <VaCard color="primary" :gradient="true" class="va-card_mx">
+                <VaCard color="primary" :gradient="true" class="va-card_mx shadow-2xl shadow-teal-600/50">
                     <VaCardTitle class="va-card__title_mx">A maior plataforma do Brasil <br> e a mais fácil de usar</VaCardTitle>
                     <VaCardContent>
                         <div>
