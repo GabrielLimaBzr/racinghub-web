@@ -1,6 +1,6 @@
 <template>
     <div>
-        <VaCarousel v-model="value" :items="item" arrows indicators autoscroll stateful infinite title="home">
+        <VaCarousel v-model="value" :items="item" arrows indicators autoscroll stateful infinite title="home" class="shadow-none">
         </VaCarousel>
     </div>
 </template>

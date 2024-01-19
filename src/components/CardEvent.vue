@@ -1,5 +1,5 @@
 <template>
-    <VaCard :to="`event/${event.id}`" class="shadow-md hover:shadow-2xl hover:shadow-teal-600/50 m-4 transition ease-in-out delay-50 hover:scale-[1.08] duration-300" outlined>
+    <VaCard :to="`event/${event.id}`" class="shadow-md hover:shadow-2xl hover:shadow-teal-600/50 m-4 transition ease-in-out delay-50 hover:scale-[1.08] duration-300">
         <VaImage src="https://picsum.photos/400/200" class="h-32" />
         <VaCardTitle class="title">
             <div class="flex items-center w-full">
@@ -44,11 +44,6 @@ defineProps({
 
 .info {
     font-size: 0.9rem;
-}
-
-.va-card{
-  border: 2px solid var(--va-background-element);
-
 }
 
 .va-card-title{
