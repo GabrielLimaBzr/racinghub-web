@@ -83,7 +83,6 @@ export default {
     },
     methods: {
         async loadUsers() {
-            console.log("abriu o metodes");
             try {
                 const users = await UserService.filterUser();
                 this.userList = users;

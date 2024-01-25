@@ -20,12 +20,11 @@ async function updateUser(updateUser: RequestUser, id: number) {
 }
 
 async function filterUser() {
-    console.log("chegamos aqui")
     try {
         const response = await http.get(`${endpoint}`)
         return response.data;
     } catch (err) {
-        console.error(`Erro ao filtrar usuários`);
+        console.error(`Erro ao filtrar usuários ${err}`);
         throw err;
     }
 }
