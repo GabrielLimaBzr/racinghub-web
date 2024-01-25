@@ -1,5 +1,6 @@
 <template>
     <div>
+        <span>{{ userList }}</span>
         <TitleHolder title="Principais Eventos" />
         <div class="grid w-full grid-cols-3 py-2 items-stretch gap-3">
             <div class="col-span-3 lg:col-span-2 p-2">
@@ -61,6 +62,7 @@ import CardEvent from '@/components/CardEvent.vue';
 import eventos from '../assets/eventsMock'
 import Carousel from '../components/Carousel.vue';
 import TitleHolder from '@/components/TitleHolder.vue';
+import UserService from '../services/user/index'
 
 export default {
     components: {
@@ -73,7 +75,22 @@ export default {
             events: eventos,
             pageCurrent: 0,
             pageSize: 10,
+            userList: []
         };
+    },
+    mounted(){
+        this.loadUsers();
+    },
+    methods: {
+        async loadUsers() {
+            console.log("abriu o metodes");
+            try {
+                const users = await UserService.filterUser();
+                this.userList = users;
+            } catch (error) {
+                console.error(`Erro ao carregar usuários: ${error.message}`);
+            }
+        }
     }
 }
 
